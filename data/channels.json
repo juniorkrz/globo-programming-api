@@ -1,0 +1,403 @@
+{
+    "internacional": {
+        "name": "Internacional",
+        "channels": {
+            "americas": {
+                "name": "Américas",
+                "url": "https://redeglobo.globo.com/americas/programacao"
+            },
+            "globo-on": {
+                "name": "Globo On",
+                "url": "https://redeglobo.globo.com/on/programacao"
+            },
+            "portugal": {
+                "name": "Portugal",
+                "url": "https://redeglobo.globo.com/portugal/programacao"
+            },
+            "africa": {
+                "name": "África",
+                "url": "https://redeglobo.globo.com/africa/programacao"
+            }
+        }
+    },
+    "regionais": {
+        "name": "Regionais",
+        "channels": {
+            "globo-brasilia": {
+                "name": "Globo Brasília",
+                "url": "https://redeglobo.globo.com/globobrasilia/programacao"
+            },
+            "globo-minas": {
+                "name": "Globo Minas",
+                "url": "https://redeglobo.globo.com/globominas/programacao"
+            },
+            "globo-nordeste": {
+                "name": "Globo Nordeste",
+                "url": "https://redeglobo.globo.com/globonordeste/programacao"
+            },
+            "rio": {
+                "name": "rio",
+                "url": "https://redeglobo.globo.com/rio/programacao"
+            },
+            "sao-paulo": {
+                "name": "são paulo",
+                "url": "https://redeglobo.globo.com/sao-paulo/programacao"
+            }
+        }
+    },
+    "rede-amazonica": {
+        "name": "Rede Amazônica",
+        "channels": {
+            "acre": {
+                "name": "acre",
+                "url": "https://redeglobo.globo.com/redeamazonica/acre/programacao"
+            },
+            "amapa": {
+                "name": "amapá",
+                "url": "https://redeglobo.globo.com/redeamazonica/amapa/programacao"
+            },
+            "amazonas": {
+                "name": "amazonas",
+                "url": "https://redeglobo.globo.com/redeamazonica/amazonas/programacao"
+            },
+            "rondonia": {
+                "name": "rondônia",
+                "url": "https://redeglobo.globo.com/redeamazonica/rondonia/programacao"
+            },
+            "roraima": {
+                "name": "roraima",
+                "url": "https://redeglobo.globo.com/redeamazonica/roraima/programacao"
+            }
+        }
+    },
+    "tv-liberal": {
+        "name": "TV Liberal",
+        "channels": {
+            "tv-liberal": {
+                "name": "TV Liberal",
+                "url": "https://redeglobo.globo.com/pa/tvliberal/programacao"
+            }
+        }
+    },
+    "tv-tapajos": {
+        "name": "TV Tapajós",
+        "channels": {
+            "tv-tapajos": {
+                "name": "TV Tapajós",
+                "url": "https://redeglobo.globo.com/pa/tvtapajos/programacao"
+            }
+        }
+    },
+    "tv-anhanguera": {
+        "name": "TV Anhanguera",
+        "channels": {
+            "goias": {
+                "name": "goiás",
+                "url": "https://redeglobo.globo.com/tvanhanguera/goias/programacao"
+            },
+            "tocantins": {
+                "name": "tocantins",
+                "url": "https://redeglobo.globo.com/tvanhanguera/tocantins/programacao"
+            }
+        }
+    },
+    "tv-centro-america": {
+        "name": "TV Centro América",
+        "channels": {
+            "tv-centro-america": {
+                "name": "TV Centro América",
+                "url": "https://redeglobo.globo.com/tvcentroamerica/programacao"
+            }
+        }
+    },
+    "tv-morena": {
+        "name": "TV Morena",
+        "channels": {
+            "tv-morena": {
+                "name": "TV Morena",
+                "url": "https://redeglobo.globo.com/tvmorena/programacao"
+            },
+            "corumba": {
+                "name": "Corumba",
+                "url": "https://redeglobo.globo.com/tvmorena/corumba/programacao"
+            },
+            "ponta-pora": {
+                "name": "Ponta Pora",
+                "url": "https://redeglobo.globo.com/tvmorena/ponta-pora/programacao"
+            }
+        }
+    },
+    "inter-tv-rn": {
+        "name": "Inter TV RN",
+        "channels": {
+            "costa-branca": {
+                "name": "costa branca",
+                "url": "https://redeglobo.globo.com/rn/intertvrn/costa-branca/programacao"
+            },
+            "natal": {
+                "name": "natal",
+                "url": "https://redeglobo.globo.com/rn/intertvrn/natal/programacao"
+            }
+        }
+    },
+    "tv-verdes-mares": {
+        "name": "TV Verdes Mares",
+        "channels": {
+            "tv-verdes-mares": {
+                "name": "TV Verdes Mares",
+                "url": "https://redeglobo.globo.com/tvverdesmares/programacao"
+            },
+            "tv-cariri": {
+                "name": "TV Cariri",
+                "url": "https://redeglobo.globo.com/tvverdesmares/tv-cariri/programacao"
+            }
+        }
+    },
+    "rede-bahia": {
+        "name": "Rede Bahia",
+        "channels": {
+            "rede-bahia": {
+                "name": "Rede Bahia",
+                "url": "https://redeglobo.globo.com/redebahia/programacao"
+            }
+        }
+    },
+    "rede-clube": {
+        "name": "Rede Clube",
+        "channels": {
+            "rede-clube": {
+                "name": "Rede Clube",
+                "url": "https://redeglobo.globo.com/pi/redeclube/programacao"
+            }
+        }
+    },
+    "tv-asa-branca": {
+        "name": "TV Asa Branca",
+        "channels": {
+            "tv-asa-branca": {
+                "name": "TV Asa Branca",
+                "url": "https://redeglobo.globo.com/pe/tvasabranca/programacao"
+            }
+        }
+    },
+    "tv-cabo-branco": {
+        "name": "TV Cabo Branco",
+        "channels": {
+            "tv-cabo-branco": {
+                "name": "TV Cabo Branco",
+                "url": "https://redeglobo.globo.com/tvcabobranco/programacao"
+            }
+        }
+    },
+    "tv-gazeta-al": {
+        "name": "TV Gazeta AL",
+        "channels": {
+            "tv-gazeta-al": {
+                "name": "TV Gazeta AL",
+                "url": "https://redeglobo.globo.com/al/tvgazetaal/programacao"
+            }
+        }
+    },
+    "tv-grande-rio": {
+        "name": "TV Grande Rio",
+        "channels": {
+            "tv-grande-rio": {
+                "name": "TV Grande Rio",
+                "url": "https://redeglobo.globo.com/pe/tvgranderio/programacao"
+            }
+        }
+    },
+    "tv-mirante": {
+        "name": "TV Mirante",
+        "channels": {
+            "tv-mirante": {
+                "name": "TV Mirante",
+                "url": "https://redeglobo.globo.com/ma/tvmirante/programacao"
+            }
+        }
+    },
+    "tv-paraiba": {
+        "name": "TV Paraíba",
+        "channels": {
+            "tv-paraiba": {
+                "name": "TV Paraíba",
+                "url": "https://redeglobo.globo.com/tvparaiba/programacao"
+            }
+        }
+    },
+    "tv-sergipe": {
+        "name": "TV Sergipe",
+        "channels": {
+            "tv-sergipe": {
+                "name": "TV Sergipe",
+                "url": "https://redeglobo.globo.com/se/tvsergipe/programacao"
+            }
+        }
+    },
+    "eptv": {
+        "name": "EPTV",
+        "channels": {
+            "campinas-e-regiao": {
+                "name": "campinas e região",
+                "url": "https://redeglobo.globo.com/sp/eptv/campinas-e-regiao/programacao"
+            },
+            "ribeirao-preto-e-franca": {
+                "name": "Ribeirão Preto e Franca",
+                "url": "https://redeglobo.globo.com/sp/eptv/ribeirao-preto-franca/programacao"
+            },
+            "sul-de-minas": {
+                "name": "sul de minas",
+                "url": "https://redeglobo.globo.com/sp/eptv/sul-de-minas/programacao"
+            },
+            "sao-carlos-e-regiao": {
+                "name": "São Carlos e Região",
+                "url": "https://redeglobo.globo.com/sp/eptv/sao-carlos-regiao/programacao"
+            }
+        }
+    },
+    "tv-tem": {
+        "name": "TV TEM",
+        "channels": {
+            "bauru": {
+                "name": "Bauru",
+                "url": "https://redeglobo.globo.com/sp/tvtem/bauru/programacao"
+            },
+            "itapetininga": {
+                "name": "itapetininga",
+                "url": "https://redeglobo.globo.com/sp/tvtem/itapetininga/programacao"
+            },
+            "sorocaba-e-regiao": {
+                "name": "sorocaba e região",
+                "url": "https://redeglobo.globo.com/sp/tvtem/sorocaba-e-regiao/programacao"
+            },
+            "sao-jose-do-rio-preto": {
+                "name": "São José do Rio Preto",
+                "url": "https://redeglobo.globo.com/sp/tvtem/sao-jose-do-rio-preto/programacao"
+            }
+        }
+    },
+    "inter-tv-mg": {
+        "name": "Inter TV MG",
+        "channels": {
+            "inter-tv-mg": {
+                "name": "Inter TV MG",
+                "url": "https://redeglobo.globo.com/mg/intertvmg/programacao"
+            }
+        }
+    },
+    "inter-tv-rj": {
+        "name": "Inter TV RJ",
+        "channels": {
+            "inter-tv-rj": {
+                "name": "Inter TV RJ",
+                "url": "https://redeglobo.globo.com/rj/intertvrj/programacao"
+            }
+        }
+    },
+    "tv-diario": {
+        "name": "TV Diário",
+        "channels": {
+            "tv-diario": {
+                "name": "TV Diário",
+                "url": "https://redeglobo.globo.com/sp/tvdiario/programacao"
+            }
+        }
+    },
+    "tv-fronteira": {
+        "name": "TV Fronteira",
+        "channels": {
+            "tv-fronteira": {
+                "name": "TV Fronteira",
+                "url": "https://redeglobo.globo.com/sp/tvfronteira/programacao"
+            }
+        }
+    },
+    "tv-gazeta-es": {
+        "name": "TV Gazeta ES",
+        "channels": {
+            "tv-gazeta-es": {
+                "name": "TV Gazeta ES",
+                "url": "https://redeglobo.globo.com/tvgazetaes/programacao"
+            }
+        }
+    },
+    "tv-integracao": {
+        "name": "TV Integração",
+        "channels": {
+            "tv-integracao": {
+                "name": "TV Integração",
+                "url": "https://redeglobo.globo.com/mg/tvintegracao/programacao"
+            },
+            "araxa": {
+                "name": "Araxa",
+                "url": "https://redeglobo.globo.com/mg/tvintegracao/araxa/programacao"
+            },
+            "ituiutaba": {
+                "name": "Ituiutaba",
+                "url": "https://redeglobo.globo.com/mg/tvintegracao/ituiutaba/programacao"
+            },
+            "juiz-de-fora": {
+                "name": "Juiz de fora",
+                "url": "https://redeglobo.globo.com/mg/tvintegracao/juiz-de-fora/programacao"
+            },
+            "uberaba": {
+                "name": "Uberaba",
+                "url": "https://redeglobo.globo.com/mg/tvintegracao/uberaba/programacao"
+            }
+        }
+    },
+    "tv-rio-sul": {
+        "name": "TV Rio Sul",
+        "channels": {
+            "tv-rio-sul": {
+                "name": "TV Rio Sul",
+                "url": "https://redeglobo.globo.com/rj/tvriosul/programacao"
+            }
+        }
+    },
+    "tv-tribuna": {
+        "name": "TV Tribuna",
+        "channels": {
+            "tv-tribuna": {
+                "name": "TV Tribuna",
+                "url": "https://redeglobo.globo.com/sp/tvtribuna/programacao"
+            }
+        }
+    },
+    "tv-vanguarda": {
+        "name": "TV Vanguarda",
+        "channels": {
+            "tv-vanguarda": {
+                "name": "TV Vanguarda",
+                "url": "https://redeglobo.globo.com/sp/tvvanguarda/programacao"
+            }
+        }
+    },
+    "nsc-tv": {
+        "name": "NSC TV",
+        "channels": {
+            "nsc-tv": {
+                "name": "NSC TV",
+                "url": "https://redeglobo.globo.com/sc/nsctv/programacao"
+            }
+        }
+    },
+    "rbs-tv": {
+        "name": "RBS TV",
+        "channels": {
+            "rbs-tv": {
+                "name": "RBS TV",
+                "url": "https://redeglobo.globo.com/rs/rbstvrs/programacao"
+            }
+        }
+    },
+    "rpc": {
+        "name": "RPC",
+        "channels": {
+            "rpc": {
+                "name": "RPC",
+                "url": "https://redeglobo.globo.com/rpc/programacao"
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+#Ignoring all the markdown files
+*.md
+
+#Ignoring dot files and folders
+.*
+
+#Ignore __pycache__
+__pycache__/
+
+#Ignore scripts
+scripts/
+
+#Ignore docs
+docs/
