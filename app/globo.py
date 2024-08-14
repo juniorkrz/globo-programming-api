@@ -52,7 +52,9 @@ class GloboProgramming:
 
         result = requests.get(url)
         if result.status_code != 200:
+            print(result.json().get("detail", "Error when making request."))
             return False
+
         return result
 
 
@@ -90,31 +92,40 @@ class GloboProgramming:
 
         for program in programs:
             # Try to find the ID of the program
-            program_id = program.attrs["id"]
-            program_id = program_id.text.strip() if program_id else None
+            try:
+                program_id = program.attrs["id"]
+                program_id = int(program_id) if program_id else None
+            except (AttributeError, ValueError, IndexError):
+                program_id = None
 
             # Try to find the name of the program
             program_name = program.find("div", {"class": "accordionTitle__name"})
             program_name = program_name.text.strip() if program_name else None
 
+            # Check if the program is live
+            program_live = "accordion--live" in program.attrs.get("class", [])
+
             # Try to find the program time
             program_time = program.find("div", {"class": "accordionTitle__time"})
             program_time = program_time.text.strip() if program_time else None
-
-            # Try to find the program logo
-            logo_div = program.find("div", {"class": "accordionTitle__logo"})
-            logo = logo_div.img.attrs["src"] if logo_div and logo_div.img else False
-
-            # Check if the program is live
-            program_live = "accordion--live" in program.attrs.get("class", [])
 
             # Adjust the time if the program is live
             if program_live and "TV" in program_time:
                 program_time = program_time.split("TV")[1].strip()
 
+            # If there is a previous program, set the endTime to the current time
+            if channel_programs:
+                channel_programs[-1]["endTime"] = program_time
+
+            # Try to find the program logo
+            logo_div = program.find("div", {"class": "accordionTitle__logo"})
+            logo = logo_div.img.attrs["src"] if logo_div and logo_div.img else False
+
             channel_program = {
+                "id": program_id,
                 "name": program_name,
                 "time": program_time,
+                "endTime": None,
                 "logo": logo,
                 "live": program_live,
             }
@@ -229,3 +240,9 @@ class GloboProgramming:
             "message": "Success",
             "result": result
         }
+
+# For tests
+if __name__ == "__main__":
+    prog = GloboProgramming(["you_token_here"])
+    result = prog.load_channel_programs('globo-brasilia')
+    print(result)
