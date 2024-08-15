@@ -1,4 +1,5 @@
 import json
+import os
 import random
 import time
 from urllib.parse import urlencode
@@ -15,6 +16,7 @@ class GloboProgramming:
         self.sa_url = "https://api.scrapingant.com/v2/general"
         self.__cache = {}
         self.channels = self.load_channels()
+        self.default_ttl = os.getenv('DEFAULT_TTL') or 60
 
 
     def __set_cache(self, key, value, ttl=30):
@@ -62,7 +64,7 @@ class GloboProgramming:
         result = self.__get_cache(channel_url)
         if not result:
             result = self.__make_request(channel_url)
-            self.__set_cache(channel_url, result, 60)
+            self.__set_cache(channel_url, result, self.default_ttl)
 
         if not result:
             return False
