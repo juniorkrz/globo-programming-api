@@ -8,6 +8,17 @@ import requests
 from bs4 import BeautifulSoup
 
 
+def get_default_ttl():
+    try:
+        ttl = int(os.getenv('DEFAULT_TTL', 60))
+        if ttl <= 0:
+            return 0
+        return ttl
+    except:
+        print(f"Invalid TTL provided, Using default TTL of 60 seconds.")
+        return 60
+
+
 class GloboProgramming:
 
 
@@ -16,7 +27,7 @@ class GloboProgramming:
         self.sa_url = "https://api.scrapingant.com/v2/general"
         self.__cache = {}
         self.channels = self.load_channels()
-        self.default_ttl = os.getenv('DEFAULT_TTL') or 60
+        self.default_ttl = get_default_ttl()
 
 
     def __set_cache(self, key, value, ttl=30):
