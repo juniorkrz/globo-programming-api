@@ -167,6 +167,11 @@ class GloboProgramming:
 
             # Add the program to the program list
             channel_programs.append(channel_program)
+
+        # Setting the endTime of the last program equal to the time of the first
+        if channel_programs:
+                channel_programs[-1]["endTime"] = channel_programs[0]["time"]
+
         return channel_programs
 
 
