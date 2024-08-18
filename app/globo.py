@@ -1,3 +1,4 @@
+import base64
 import json
 import os
 import random
@@ -57,10 +58,21 @@ class GloboProgramming:
 
 
     def __make_request(self, channel_url):
+        # js snippet to open all accordions
+        js_snippet = """document.querySelectorAll('.accordionTitle__arrow').forEach(element => {
+            if (!element.classList.contains('accordionTitle__arrow--opened')) {
+                element.click();
+            }
+        });"""
+
+        base64_snippet = base64.b64encode(js_snippet.encode()).decode()
+
         params = {
             "url": channel_url,
-            "x-api-key": random.choice(self.api_keys)
+            "x-api-key": random.choice(self.api_keys),
+            "js_snippet": base64_snippet
             }
+
         url = f"{self.sa_url}?{urlencode(params)}"
 
         result = requests.get(url)
@@ -134,6 +146,31 @@ class GloboProgramming:
             logo_div = program.find("div", {"class": "accordionTitle__logo"})
             logo = logo_div.img.attrs["src"] if logo_div and logo_div.img else False
 
+            # Try to find the preview image
+            try:
+                program_preview = program.picture.img.attrs["src"]
+            except AttributeError:
+                background_style = program.find("div", {"class": "poster__background"})
+                if background_style and "style" in background_style.attrs:
+                    program_preview = background_style.attrs["style"].split('"')[1]
+                else:
+                    program_preview = None
+
+            # Try to find the synopsis of the program
+            program_synopsis = program.find("p", {"class": "accordion-panel__synopsis"})
+            program_synopsis = program_synopsis.text.strip() if program_synopsis else None
+
+            # Try to find the genre of the program
+            genre_div = program.find("div", {"class": "genre-badge"})
+            genre = genre_div.find_all("span")[-1].text.strip() if genre_div else None
+
+            # Try to find the program's rating
+            parental_rating_div = program.find("svg", {"class": "parental-rating"})
+            try:
+                parental_rating = int(parental_rating_div.find("title").text.split(": ")[1].split(" ")[0]) if parental_rating_div else None
+            except (AttributeError, ValueError, IndexError):
+                parental_rating = None
+
             channel_program = {
                 "id": program_id,
                 "name": program_name,
@@ -141,40 +178,11 @@ class GloboProgramming:
                 "endTime": None,
                 "logo": logo,
                 "live": program_live,
+                "preview": program_preview,
+                "synopsis": program_synopsis,
+                "genre": genre,
+                "parentalRating": parental_rating
             }
-
-            # If the program is live, we extract more information
-            if program_live:
-                # Try to find the preview image
-                try:
-                    program_preview = program.picture.img.attrs["src"]
-                except AttributeError:
-                    background_style = program.find("div", {"class": "poster__background"})
-                    if background_style and "style" in background_style.attrs:
-                        program_preview = background_style.attrs["style"].split('"')[1]
-                    else:
-                        program_preview = None
-
-                # Try to find the synopsis of the program
-                program_synopsis = program.find("p", {"class": "accordion-panel__synopsis"})
-                program_synopsis = program_synopsis.text.strip() if program_synopsis else None
-
-                # Try to find the genre of the program
-                genre_div = program.find("div", {"class": "genre-badge"})
-                genre = genre_div.find_all("span")[-1].text.strip() if genre_div else None
-
-                # Try to find the program's rating
-                parental_rating_div = program.find("svg", {"class": "parental-rating"})
-                try:
-                    parental_rating = int(parental_rating_div.find("title").text.split(": ")[1].split(" ")[0]) if parental_rating_div else None
-                except (AttributeError, ValueError, IndexError):
-                    parental_rating = None
-
-                # Adds new information to the program dictionary
-                channel_program["preview"] = program_preview
-                channel_program["synopsis"] = program_synopsis
-                channel_program["genre"] = genre
-                channel_program["parentalRating"] = parental_rating
 
             # Add the program to the program list
             channel_programs.append(channel_program)
