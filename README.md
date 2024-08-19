@@ -41,7 +41,7 @@ Este projeto permite realizar consultas na programação da TV Glovo. Ele oferec
 
 Obtém a lista de canais completa.
 
-## /channel_programs/{name}
+## /channelPrograms/{name}
 
 Realiza a consulta da programação do canal informado.
 
